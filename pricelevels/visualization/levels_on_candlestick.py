@@ -8,9 +8,9 @@ from ._helpers import _plot_levels
 
 def plot_levels_on_candlestick(df, levels, only_good=False, path=None,
                                formatter=mdates.DateFormatter('%y-%m-%d %H:%M:%S')):
-    ohlc = df[['Datetime', 'Open', 'High', 'Low', 'Close']].copy()
-    ohlc["Datetime"] = pd.to_datetime(ohlc['Datetime'])
-    ohlc["Datetime"] = ohlc["Datetime"].apply(lambda x: mdates.date2num(x))
+    ohlc = df[['Date', 'Open', 'High', 'Low', 'Close']].copy()
+    ohlc["Date"] = pd.to_datetime(ohlc['Date'])
+    ohlc["Date"] = ohlc["Datetime"].apply(lambda x: mdates.date2num(x))
     f1, ax = plt.subplots(figsize=(10, 5))
     candlestick2_ohlc(ax,
                       closes=ohlc.Close.values,
