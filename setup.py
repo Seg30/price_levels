@@ -25,7 +25,7 @@ setup(
 
     install_requires=[
         'scikit-learn==0.21.2',
-        'pandas==0.25.0',
+        'pandas==0.25.3',
         'ZigZag==0.2.2',
         'matplotlib==3.1.1',
     ],
